@@ -15,19 +15,27 @@ import React from "react";
 import NextImage from "next/image";
 import { BsFillStarFill } from "react-icons/bs";
 import { IoMdArrowRoundForward } from "react-icons/io";
-import { LogoIcon } from "../Svg/LogoIcon";
-import { VrIcon } from "../Svg/VrIcon";
+import { MustakilIcon } from "../Svgs";
+
 const Hero = () => {
   return (
     <VStack
+      id={"home"}
+      as={"section"}
+      height={"100vh"}
       display={"flex"}
+      justifyContent={"center"}
+      alignItems={"center"}
       marginTop={10}
       width={"full"}
-      flexDir={"row"}
       padding={4}
       style={{ margin: 0, backgroundColor: "#E5E5E506" }}
     >
-      <HStack width={"full"}>
+      <HStack
+        width={"full"}
+        flexDir={{ base: "column", md: "row" }}
+        alignItems={"center"}
+      >
         <Flex
           style={{
             margin: 0,
@@ -66,7 +74,7 @@ const Hero = () => {
           </Text>
           <HStack marginTop={4}>
             <Button
-              leftIcon={<LogoIcon color={"white"} />}
+              leftIcon={<MustakilIcon color={"white"} />}
               colorScheme={"teal"}
               variant='solid'
             >
@@ -81,9 +89,7 @@ const Hero = () => {
             </Button>
           </HStack>
         </Flex>
-        <Flex alignItems={"flex-end"} width={"full"}>
-          <VrIcon boxSize={600} />
-        </Flex>
+        <Flex alignItems={"flex-end"} width={"full"}></Flex>
       </HStack>
     </VStack>
   );

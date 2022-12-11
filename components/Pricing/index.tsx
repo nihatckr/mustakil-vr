@@ -37,7 +37,7 @@ function PriceWrapper({ children }: { children: React.ReactNode }) {
 const Pricing = ({ data }) => {
   console.log(data);
   return (
-    <>
+    <VStack as={"section"} id={"price"}>
       <HStack width={"full"} justifyContent={"center"}>
         <VStack spacing={2} textAlign='center'>
           <Heading as='h1' fontSize='4xl'>
@@ -100,7 +100,7 @@ const Pricing = ({ data }) => {
           );
         })}
       </Stack>
-    </>
+    </VStack>
   );
 };
 

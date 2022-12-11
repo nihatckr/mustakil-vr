@@ -5,30 +5,85 @@ import {
 } from "react-icons/md";
 import { FaNetworkWired } from "react-icons/fa";
 import { BiGlassesAlt, BiCodeAlt, BiCustomize } from "react-icons/bi";
+import { BsTwitter, BsLinkedin, BsInstagram } from "react-icons/bs";
 import { GiSwordBrandish } from "react-icons/gi";
 import { FaVrCardboard } from "react-icons/fa";
 import { DiGoogleAnalytics } from "react-icons/di";
 import { RiLockPasswordFill, RiSoundcloudFill } from "react-icons/ri";
-export const links = [
+import { IconType } from "react-icons";
+
+export const clients = [
   {
     id: 1,
-    label: "Features",
-    href: "/",
+    label: "Ozak Gyo",
+    logo: "/client/ozak-gyo.png",
+    href: "",
   },
   {
     id: 2,
-    label: "Explore",
+    label: "Paratoner Mimarlık",
+    logo: "/client/paratoner-mim.png",
     href: "/",
   },
   {
     id: 3,
-    label: "Pricing",
+    label: "Adört Mimarlık",
+    logo: "/client/adort-mim.jpg",
     href: "/",
   },
   {
     id: 4,
-    label: "Contact",
+    label: "Studio13 Architects",
+    logo: "/client/s13-mim.png",
     href: "/",
+  },
+  {
+    id: 4,
+    label: "Paye Studio",
+    logo: "/client/paye-mim.png",
+    href: "/",
+  },
+];
+export const soclialLinks = [
+  {
+    id: 1,
+    label: "Twitter",
+    href: "/",
+    icon: BsTwitter,
+  },
+  {
+    id: 2,
+    label: "Instagram",
+    href: "/",
+    icon: BsInstagram,
+  },
+  {
+    id: 3,
+    label: "Linkedin",
+    href: "/",
+    icon: BsLinkedin,
+  },
+];
+export const links = [
+  {
+    id: 1,
+    label: "Features",
+    href: "#features",
+  },
+  {
+    id: 2,
+    label: "Projects",
+    href: "#projects",
+  },
+  {
+    id: 3,
+    label: "Pricing",
+    href: "#price",
+  },
+  {
+    id: 4,
+    label: "Contact",
+    href: "#contact",
   },
 ];
 export const keyFeatures = [
@@ -76,11 +131,31 @@ export const keyFeatures = [
     icon: MdOutlineDesignServices,
   },
 ];
+export interface featuresKeyType {
+  id: number;
+  title: string;
+  icon: IconType;
+}
 
+export interface featuresOneType {
+  id: number;
+  side: boolean;
+  title: string;
+  color: string;
+  subtitle: string;
+  data: featuresData[];
+}
+[];
+export interface featuresData {
+  id: number;
+  title: string;
+  icon: any;
+}
 export const featuresOne = {
   id: 1,
   side: true,
   title: "Virtual Reality in few seconds",
+  color: "",
   subtitle:
     "Quickly generate palettes from one color, local style or selection.",
   data: [

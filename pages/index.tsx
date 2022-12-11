@@ -1,25 +1,34 @@
 import Layout from "../layout";
 import Hero from "../components/Hero";
-
-import FeaturesHero from "../components/FeaturesHero";
 import React, { useState } from "react";
-import { featuresOne, featuresThree, featuresTwo, price } from "../data";
+import {
+  featuresOne,
+  featuresOneType,
+  featuresThree,
+  featuresTwo,
+  price,
+} from "../data";
+
 import Pricing from "../components/Pricing";
-import FeaturesKey from "../components/FeaturesKey";
+import Features from "../components/Features";
+import Clients from "../components/Clients";
+import Contact from "../components/Contact";
+import Projects from "../components/Projects";
 
 export default function Home() {
-  const [one, setOne] = useState(featuresOne);
+  const [one, setOne] = useState<featuresOneType>(featuresOne);
   const [two, setTwo] = useState(featuresTwo);
   const [three, setThree] = useState(featuresThree);
   const [prices, setPrices] = useState(price);
+
   return (
     <Layout>
       <Hero />
-      <FeaturesHero data={one} />
-      <FeaturesHero data={two} />
-      <FeaturesHero data={three} />
+      {/* <Features />
+      <Projects />
       <Pricing data={price} />
-      <FeaturesKey />
+      <Clients />
+      <Contact /> */}
     </Layout>
   );
 }
